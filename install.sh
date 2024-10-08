@@ -47,3 +47,7 @@ git config --global credential.helper "cache --timeout=86400"
 echo "Changing shell to zsh"
 
 sudo chsh -s /usr/bin/zsh
+
+echo "Remove unnecessary packages"
+yay -Sc --noconfirm 
+sudo pacman -Rs $(pacman -Qtdq) --noconfirm
